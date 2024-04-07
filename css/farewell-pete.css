@@ -1,0 +1,426 @@
+/* Pete's farewell book */
+
+@font-face {
+  font-family: "Stempel-Garamond-W01-Roman";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Stempel-Garamond-W01-Roman.woff") format("woff");
+}
+
+body,
+ul,
+table,
+form {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Looks like Modernizr adds this class */
+.csstransforms {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.animated {
+  -webkit-transition: margin-left 0.2s ease-in-out;
+  -moz-transition: margin-left 0.2s ease-in-out;
+  -o-transition: margin-left 0.2s ease-in-out;
+  -ms-transition: margin-left 0.2s ease-in-out;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+#canvas {
+  width: 960px;
+  height: 600px;
+  margin: 60px auto;
+}
+
+#book-zoom {
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -ms-transition: -ms-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+}
+
+.fp-book {
+  width: 960px;
+  height: 600px;
+}
+
+.fp-book h1 {
+  font-family: "Stempel-Garamond-W01-Roman";
+  font-size: 38px;
+  font-weight: lighter;
+  margin: 20px 0;
+  color: #333;
+  -webkit-text-fill-color: #333;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.005em;
+}
+
+.fp-book h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.fp-book .book-content {
+  font-family: "Stempel-Garamond-W01-Roman";
+  font-size: 16px;
+  margin: 70px 40px;
+}
+
+.fp-book blockquote {
+  color: #586078;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+.fp-book blockquote:before {
+  content: "\201C";
+  color: #333d53;
+  font-size: 20px;
+}
+
+.fp-book blockquote:after {
+  content: "\201D";
+  color: #333d53;
+  font-size: 20px;
+}
+
+.fp-book cite {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 200;
+  font-style: normal;
+  color: #666;
+}
+
+.fp-book .book-content .center-pic {
+  margin: 0;
+  text-indent: 0;
+  text-align: center;
+}
+
+.fp-book .zoom-this:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.fp-book .book-content p {
+  text-indent: 18px;
+  margin: 20px 0;
+  line-height: 22px;
+}
+
+.fp-book .left-pic {
+  float: left;
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.animated {
+  -webkit-transition: margin-left 0.2s ease-in-out;
+  -moz-transition: margin-left 0.2s ease-in-out;
+  -o-transition: margin-left 0.2s ease-in-out;
+  -ms-transition: margin-left 0.2s ease-in-out;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+.fp-book .shadow {
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  -moz-transition: -moz-box-shadow 0.5s;
+  -o-transition: -webkit-box-shadow 0.5s;
+  -ms-transition: -ms-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+
+  -webkit-box-shadow: 0 0 10px #999;
+  -moz-box-shadow: 0 0 10px #999;
+  -ms-box-shadow: 0 0 10px #999;
+  -o-box-shadow: 0 0 10px #999;
+  box-shadow: 0 0 10px #999;
+}
+
+.fp-book .page {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.zoom-pic img {
+  -webkit-box-shadow: 0 0 20px #999;
+  -moz-box-shadow: 0 0 20px #999;
+  -o-box-shadow: 0 0 20px #999;
+  -ms-box-shadow: 0 0 20px #999;
+  box-shadow: 0 0 20px #999;
+}
+
+.fp-book .p1,
+.fp-book .p2,
+.fp-book .p3,
+.fp-book .p37,
+.fp-book .p38 {
+  background-color: white;
+  background-image: url(../pics/book-covers.jpg) !important;
+}
+
+/* .fp-book .p1 {
+  background-image: url(../pics/front-cover-min.jpeg) !important;
+  background-position: 50% 50% !important;
+  background-size: cover !important;
+} */
+
+.fp-book .p1 .side {
+  width: 5px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 475px;
+
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #bbb),
+    color-stop(0.5, #ddd),
+    color-stop(1, #bbb)
+  );
+  background-image: -webkit-linear-gradient(left, #bbb, #ddd, #bbb);
+  background-image: -moz-linear-gradient(left, #bbb, #ddd, #bbb);
+  background-image: -ms-linear-gradient(left, #bbb, #ddd, #bbb);
+  background-image: -o-linear-gradient(left, #bbb, #ddd, #bbb);
+  background-image: linear-gradient(left, #bbb, #ddd, #bbb);
+
+  -webkit-transform: rotateY(-90deg);
+  -moz-transform: rotateY(-90deg);
+  -o-transform: rotateY(-90deg);
+  -ms-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -o-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+  z-index: 100000;
+}
+
+.fp-book-transform div[page="1"] > div,
+.fp-book-transform div[page="2"] > div {
+  overflow: visible !important;
+}
+
+.fp-book .depth {
+  background-image: url(../pics/pages-depth.png);
+  position: absolute;
+  top: 7px;
+  width: 16px;
+  height: 590px;
+}
+
+.fp-book .front-side .depth {
+  left: 4px;
+  background-position: 0 0;
+}
+
+.fp-book .back-side .depth {
+  right: 4px;
+  background-position: right 0;
+}
+
+.fp-book .p2 {
+  background-position: -480px 0 !important;
+}
+
+.fp-book .p3 {
+  background-position: -1920px 0 !important;
+}
+
+.fp-book .p5 .heading,
+.fp-book .p25 .heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
+  font-family: "Stempel-Garamond-W01-Roman";
+  font-size: 42px;
+  font-weight: lighter;
+  color: #333;
+  -webkit-text-fill-color: #333;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.005em;
+}
+
+.fp-book .p37 {
+  background-position: -960px 0 !important;
+}
+
+.fp-book .p38 {
+  background-position: -1440px 0 !important;
+}
+
+.fp-book .hard {
+  width: 480px;
+  height: 600px;
+  background-color: white;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+
+.fp-book .page-wrapper {
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  perspective: 2000px;
+}
+
+.fp-book .own-size {
+  width: 460px;
+  height: 582px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.fp-book .even {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0.95, #fff),
+    color-stop(1, #dadada)
+  );
+  background-image: -webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image: -moz-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image: -ms-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image: -o-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image: linear-gradient(left, #fff 95%, #dadada 100%);
+}
+
+.fp-book .odd {
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    color-stop(0.95, #fff),
+    color-stop(1, #cacaca)
+  );
+  background-image: -webkit-linear-gradient(right, #fff 95%, #cacaca 100%);
+  background-image: -moz-linear-gradient(right, #fff 95%, #cacaca 100%);
+  background-image: -ms-linear-gradient(right, #fff 95%, #cacaca 100%);
+  background-image: -o-linear-gradient(right, #fff 95%, #cacaca 100%);
+  background-image: linear-gradient(right, #fff 95%, #cacaca 100%);
+}
+
+.fp-book .loader {
+  background-image: url(../pics/loader.gif);
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 280px;
+  left: 219px;
+}
+
+.fp-book .page-number {
+  color: #999;
+  width: 100%;
+  bottom: 25px;
+  position: absolute;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  font-size: 11px;
+}
+
+.fp-book .table-contents {
+  font-size: 16px;
+  width: 300px;
+  margin: 80px auto;
+  color: #ccc;
+}
+
+.fp-book .table-contents li {
+  list-style: none;
+  line-height: 25px;
+}
+
+.fp-book .table-contents span {
+  float: right;
+}
+
+.fp-book .table-contents a {
+  float: left;
+  width: 95%;
+  clear: both;
+  text-decoration: none;
+  color: #333;
+  margin: 2px 0;
+  padding: 0 10px;
+}
+
+.fp-book .table-contents a:hover {
+  background: #cad1ee;
+  float: left;
+  width: 95%;
+  clear: both;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.fp-book .book-content .capital,
+.fp-book .book-content .no-indent {
+  text-indent: 0;
+}
+
+.fp-book .capital:first-letter {
+  display: block;
+  float: left;
+  font-size: 300%;
+  line-height: 70%;
+  margin-right: 6px;
+  margin-top: 7px;
+  margin-left: 18px;
+}
+
+.ie8 .fp-book .even,
+.ie9 .fp-book .even {
+  background-image: url(../pics/gradient-page-left.jpg);
+  background-position: right top;
+  background-repeat: repeat-y;
+}
+
+.ie8 .fp-book .odd,
+.ie9 .fp-book .odd {
+  background-image: url(../pics/gradient-page-right.jpg);
+  background-position: left top;
+  background-repeat: repeat-y;
+}
