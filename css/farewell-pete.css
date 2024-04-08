@@ -249,7 +249,8 @@ form {
 }
 
 .fp-book .p2 {
-  background-position: -480px 0 !important;
+  background-position: -960px 0 !important;
+  transform: rotateY(180deg) !important;
 }
 
 .fp-book .p5 .heading,
