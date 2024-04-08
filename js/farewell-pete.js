@@ -17,11 +17,11 @@ function updateDepth(book, newPage) {
   depthWidth = 14 * Math.min(1, ((pages - page) * 2) / pages);
 
   if (newPage < pages - 3)
-    $(".fp-book .p37 .depth").css({
+    $(".fp-book .p31 .depth").css({
       width: depthWidth,
       right: 20 - depthWidth,
     });
-  else $(".fp-book .p37 .depth").css({ width: 0 });
+  else $(".fp-book .p31 .depth").css({ width: 0 });
 }
 
 function loadPage(page) {

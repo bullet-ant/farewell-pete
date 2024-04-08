@@ -4,6 +4,7 @@
 
 <head>
 	<title>Farewell Pete!</title>
+	<link rel="icon" href="./pics/farewell.png" type="image/x-icon">
 	<script type="text/javascript" src="./extras/jquery.min.1.7.js"></script>
 	<script type="text/javascript" src="./extras/jquery-ui-1.8.20.custom.min.js"></script>
 	<script type="text/javascript" src="./extras/jquery.mousewheel.min.js"></script>
@@ -23,10 +24,10 @@
 				</div>
 				<div class="own-size"></div>
 				<div class="own-size even"></div>
-				<div class="hard fixed back-side p37">
+				<div class="hard fixed back-side p31">
 					<div class="depth"></div>
 				</div>
-				<div class="hard p38"></div>
+				<div class="hard p32"></div>
 			</div>
 		</div>
 	</div>
@@ -155,7 +156,7 @@
 				autoCenter: true,
 				gradients: true,
 				duration: 1000,
-				pages: 38,
+				pages: 32,
 				when: {
 					turning: function (e, page, view) {
 						var book = $(this),
@@ -196,8 +197,8 @@
 						else $(".fp-book .p2").removeClass("fixed");
 
 						if (page < book.turn("pages"))
-							$(".fp-book .p37").addClass("fixed");
-						else $(".fp-book .p37").removeClass("fixed");
+							$(".fp-book .p31").addClass("fixed");
+						else $(".fp-book .p31").removeClass("fixed");
 
 						Hash.go("page/" + page).update();
 					},

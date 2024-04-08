@@ -67,7 +67,7 @@ form {
 .fp-book h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 2px;
   font-weight: 400;
 }
@@ -178,9 +178,8 @@ form {
 
 .fp-book .p1,
 .fp-book .p2,
-.fp-book .p3,
-.fp-book .p37,
-.fp-book .p38 {
+.fp-book .p31,
+.fp-book .p32 {
   background-color: white;
   background-image: url(../pics/book-covers.jpg) !important;
 }
@@ -253,12 +252,8 @@ form {
   background-position: -480px 0 !important;
 }
 
-.fp-book .p3 {
-  background-position: -1920px 0 !important;
-}
-
 .fp-book .p5 .heading,
-.fp-book .p25 .heading {
+.fp-book .p21 .heading {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -275,11 +270,11 @@ form {
   -webkit-text-stroke-width: 0.005em;
 }
 
-.fp-book .p37 {
+.fp-book .p31 {
   background-position: -960px 0 !important;
 }
 
-.fp-book .p38 {
+.fp-book .p32 {
   background-position: -1440px 0 !important;
 }
 
@@ -399,6 +394,10 @@ form {
 .fp-book .book-content .capital,
 .fp-book .book-content .no-indent {
   text-indent: 0;
+}
+
+.fp-book .book-content .align-center {
+  text-align: center;
 }
 
 .fp-book .capital:first-letter {
