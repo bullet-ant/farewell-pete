@@ -24,10 +24,10 @@
 				</div>
 				<div class="own-size"></div>
 				<div class="own-size even"></div>
-				<div class="hard fixed back-side p31">
+				<div class="hard fixed back-side p21">
 					<div class="depth"></div>
 				</div>
-				<div class="hard p32"></div>
+				<div class="hard p22"></div>
 			</div>
 		</div>
 	</div>
@@ -156,7 +156,7 @@
 				autoCenter: true,
 				gradients: true,
 				duration: 1000,
-				pages: 32,
+				pages: 22,
 				when: {
 					turning: function (e, page, view) {
 						var book = $(this),
@@ -197,8 +197,8 @@
 						else $(".fp-book .p2").removeClass("fixed");
 
 						if (page < book.turn("pages"))
-							$(".fp-book .p31").addClass("fixed");
-						else $(".fp-book .p31").removeClass("fixed");
+							$(".fp-book .p21").addClass("fixed");
+						else $(".fp-book .p21").removeClass("fixed");
 
 						Hash.go("page/" + page).update();
 					},
@@ -207,6 +207,19 @@
 						var book = $(this);
 
 						if (page == 2 || page == 3) {
+							var page3 = document.querySelector('.p3');
+							page3.innerHTML = `
+							<div class="book-content">
+								<div style='position 'relative">
+									<div style='position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);'>
+										<div class="align-center">
+											<blockquote> How lucky I am to have something that makes saying goodbye so hard. </blockquote>
+											<cite> Winne the Pooh</cite>
+										</div>
+									</div>
+								</div>
+							</div>
+							`;
 							book.turn("peel", "br");
 						}
 

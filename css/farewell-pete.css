@@ -176,19 +176,35 @@ form {
   box-shadow: 0 0 20px #999;
 }
 
+.octopus {
+  position: relative;
+  height: 440px;
+  width: 400px;
+}
+
+.octopus img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 .fp-book .p1,
 .fp-book .p2,
-.fp-book .p31,
-.fp-book .p32 {
+.fp-book .p21,
+.fp-book .p22 {
   background-color: white;
   background-image: url(../pics/book-covers.jpg) !important;
 }
 
-/* .fp-book .p1 {
-  background-image: url(../pics/front-cover-min.jpeg) !important;
-  background-position: 50% 50% !important;
+.fp-book .p1 {
+  background-image: url(../pics/octopuses/front.png) !important;
+  /* background-position: 50% 50% !important; */
   background-size: cover !important;
-} */
+}
 
 .fp-book .p1 .side {
   width: 5px;
@@ -265,18 +281,23 @@ form {
   font-family: "Stempel-Garamond-W01-Roman";
   font-size: 42px;
   font-weight: lighter;
-  color: #333;
-  -webkit-text-fill-color: #333;
+  color: #576078;
+  -webkit-text-fill-color: #576078;
   -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 0.005em;
 }
 
-.fp-book .p31 {
+.fp-book .p21 {
   background-position: -960px 0 !important;
 }
 
-.fp-book .p32 {
-  background-position: -1440px 0 !important;
+.fp-book .p22 {
+  /* background-position: -1440px 0 !important; */
+}
+.fp-book .p22 {
+  background-image: url(../pics/last-cover.png) !important;
+  /* background-position: 50% 50% !important; */
+  background-size: cover !important;
 }
 
 .fp-book .hard {
